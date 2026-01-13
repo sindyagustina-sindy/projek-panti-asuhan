@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anak Asuh - Panti Asuhan Kasih sayang</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:  #ff85c1;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Panti Asuhan Kasih sayang</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="anak.html">Anak Asuh</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Daftar Anak Asuh</h2>
+      <div class="row g-4">
+
+    
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Byeon Woo Seok (3).jpg" class="card-img-top"  alt="Anak 1">
+            <div class="card-body">
+              <h5 class="card-title">Byun woo-seok</h5>
+              <p class="card-text">Usia: 10 tahun<br>Hobi: Menggambar</p>
+              <div class="text-muted" style="display:none;">woo-seok adalah anak yang ceria dan rajin belajar. Ia memiliki cita-cita menjadi pilot.</div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-md-4">
+          <div class="card">
+            <img src="download (7).jpg" class="card-img-top" alt="Anak 2">
+            <div class="card-body">
+              <h5 class="card-title">Park bogum</h5>
+              <p class="card-text">Usia: 12 tahun<br>Hobi: Sepak bola</p>
+              <div class="text-muted" style="display:none;">Bogum sangat suka olahraga dan aktif di kegiatan ekstrakurikuler sekolah.</div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-md-4">
+          <div class="card">
+            <img src="BABY SONG KANG.jpg" class="card-img-top" alt="Anak 3">
+            <div class="card-body">
+              <h5 class="card-title">Songkang</h5>
+              <p class="card-text">Usia: 11 tahun<br>Hobi: Membaca</p>
+              <div class="text-muted" style="display:none;">Songkang sangat menyukai buku cerita dan sering membacakan dongeng untuk adik-adiknya.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="text-white text-center py-3" style="background-color:#ff85c1;"> 
+    <p class="mb-0">&copy; 2025 Panti Asuhan Kasih sayang</p>
+  </footer>
+
+  <script>
+    
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const detail = card.querySelector('.text-muted');
+        if (detail) detail.style.display = 'block';
+      });
+      card.addEventListener('mouseleave', () => {
+        const detail = card.querySelector('.text-muted');
+        if (detail) detail.style.display = 'none';
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

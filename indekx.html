@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda - Panti Asuhan Kasih Sayang</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    
+    #loading {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #ccc;
+      border-top-color: #ff00bf;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .btn-pink {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    .btn-pink:hover {
+      background-color: #ff85c1;
+    }
+  </style>
+</head>
+<body onload="hideLoading()">
+  <div id="loading">
+    <div class="spinner"></div>
+  </div>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ff85c1;">
+    <div class="container">
+      <a class="navbar-brand" href="#">Panti Asuhan Kasih Sayang</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="indekx.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="anak.html">Anak Asuh</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <header class="bg-light text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Selamat Datang di Panti Asuhan Kasih Sayang</h1>
+      <p class="lead">Memberi kasih, harapan, dan masa depan bagi anak-anak yang membutuhkan</p>
+      <a href="profil.html" class="btn btn-primary">Lihat Profil</a>
+    </div>
+  </header>
+
+  
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Tentang Kami</h2>
+      <p class="text-center">Panti Asuhan Kasih Sayang berdiri sejak tahun 2009 dan berkomitmen untuk merawat dan mendidik anak-anak yatim serta kurang mampu agar tumbuh menjadi generasi yang mandiri dan berakhlak mulia.</p>
+    </div>
+  </section>
+
+  
+  <footer class="text-white text-center py-3" style="background-color: #ff85c1;">
+    <p class="mb-0">&copy; 2025 Panti Asuhan Kasih Sayang</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function hideLoading() {
+      const loader = document.getElementById('loading');
+      loader.style.opacity = '1';
+      const fadeOut = setInterval(() => {
+        if (loader.style.opacity > 0) {
+          loader.style.opacity -= 0.1;
+        } else {
+          clearInterval(fadeOut);
+          loader.style.display = 'none';
+        }
+      }, 400);
+    }
+  </script>
+</body>
+</html>
